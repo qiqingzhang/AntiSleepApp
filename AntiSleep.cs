@@ -45,13 +45,23 @@ namespace AntiSleepApp
             }
         }
 
+        /// <summary>
+        ///     pin to desktop funtion.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Pin2Desktop_CheckedChanged(object sender, EventArgs e)
         {
-            this.TopMost = !this.TopMost;
-            Pin2Desktop.Checked = this.TopMost;
+            this.TopMost = !TopMost;
+            Pin2Desktop.Checked = TopMost;
         }
 
-        private void Start_Click(object sender, EventArgs e)
+        /// <summary>
+        ///     start button click function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StartButton_Click(object sender, EventArgs e)
         {
             if (_antiSleepThread == null || !_antiSleepThread.IsAlive)
             {
@@ -72,7 +82,12 @@ namespace AntiSleepApp
             }
         }
 
-        private void Stop_Click(object sender, EventArgs e)
+        /// <summary>
+        ///     stop button click function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StopButton_Click(object sender, EventArgs e)
         {
             _keepRunning = false;
 
@@ -87,3 +102,4 @@ namespace AntiSleepApp
         }
     }
 }
+    

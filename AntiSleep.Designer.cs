@@ -43,7 +43,7 @@
             this.startButton.TabIndex = 0;
             this.startButton.Text = "start";
             this.startButton.UseVisualStyleBackColor = true;
-            this.startButton.Click += new System.EventHandler(this.Start_Click);
+            this.startButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // stopButton
             // 
@@ -53,7 +53,7 @@
             this.stopButton.TabIndex = 1;
             this.stopButton.Text = "stop";
             this.stopButton.UseVisualStyleBackColor = true;
-            this.stopButton.Click += new System.EventHandler(this.Stop_Click);
+            this.stopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
             // statusLabel
             // 
