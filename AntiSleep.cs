@@ -13,6 +13,7 @@ namespace AntiSleepApp
 
         public AntiSleep()
         {
+            TopMost = true;
             InitializeComponent();
         }
 

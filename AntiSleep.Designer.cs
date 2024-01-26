@@ -81,6 +81,7 @@
             this.Pin2Desktop.TabIndex = 4;
             this.Pin2Desktop.Text = "Pin to desktop";
             this.Pin2Desktop.UseVisualStyleBackColor = true;
+            this.Pin2Desktop.Checked = true;
             this.Pin2Desktop.CheckedChanged += new System.EventHandler(this.Pin2Desktop_CheckedChanged);
             // 
             // AntiSleep
