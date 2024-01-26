@@ -58,9 +58,9 @@
             this.statusLabel.AutoSize = true;
             this.statusLabel.Location = new System.Drawing.Point(118, 175);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(71, 12);
+            this.statusLabel.Size = new System.Drawing.Size(83, 12);
             this.statusLabel.TabIndex = 2;
-            this.statusLabel.Text = "never stop~";
+            this.statusLabel.Text = "never stop...";
             // 
             // AntiSleep
             // 
