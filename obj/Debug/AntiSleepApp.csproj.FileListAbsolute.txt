@@ -8,3 +8,17 @@ D:\repo\AntiSleepApp\AntiSleepApp\AntiSleepApp\obj\Debug\AntiSleepApp.csproj.Gen
 D:\repo\AntiSleepApp\AntiSleepApp\AntiSleepApp\obj\Debug\AntiSleepApp.csproj.CoreCompileInputs.cache
 D:\repo\AntiSleepApp\AntiSleepApp\AntiSleepApp\obj\Debug\AntiSleepApp.exe
 D:\repo\AntiSleepApp\AntiSleepApp\AntiSleepApp\obj\Debug\AntiSleepApp.pdb
+D:\repo\AntiSleepApp\bin\Debug\AntiSleepApp.exe.config
+D:\repo\AntiSleepApp\bin\Debug\AntiSleepApp.exe.manifest
+D:\repo\AntiSleepApp\bin\Debug\AntiSleepApp.application
+D:\repo\AntiSleepApp\bin\Debug\AntiSleepApp.exe
+D:\repo\AntiSleepApp\bin\Debug\AntiSleepApp.pdb
+D:\repo\AntiSleepApp\obj\Debug\AntiSleepApp.csproj.AssemblyReference.cache
+D:\repo\AntiSleepApp\obj\Debug\AntiSleepApp.AntiSleep.resources
+D:\repo\AntiSleepApp\obj\Debug\AntiSleepApp.Properties.Resources.resources
+D:\repo\AntiSleepApp\obj\Debug\AntiSleepApp.csproj.GenerateResource.cache
+D:\repo\AntiSleepApp\obj\Debug\AntiSleepApp.csproj.CoreCompileInputs.cache
+D:\repo\AntiSleepApp\obj\Debug\AntiSleepApp.exe.manifest
+D:\repo\AntiSleepApp\obj\Debug\AntiSleepApp.application
+D:\repo\AntiSleepApp\obj\Debug\AntiSleepApp.exe
+D:\repo\AntiSleepApp\obj\Debug\AntiSleepApp.pdb
