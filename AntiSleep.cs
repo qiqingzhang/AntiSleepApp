@@ -16,6 +16,41 @@ namespace AntiSleepApp
             InitializeComponent();
         }
 
+        private void AntiSleepTask()
+        {
+            while (_keepRunning)
+            {
+                foreach (var c in Slogan)
+                {
+                    if (!_keepRunning) break;
+
+                    SendKeys.SendWait(c.ToString());
+                    Thread.Sleep(400);
+                }
+
+                for (var i = 0; i < Slogan.Length; i++)
+                {
+                    if (!_keepRunning) break;
+
+                    SendKeys.SendWait("{BACKSPACE}");
+                    Thread.Sleep(400);
+                }
+
+                var count = 0;
+                while (count < 50 && _keepRunning)
+                {
+                    Thread.Sleep(100);
+                    count++;
+                }
+            }
+        }
+
+        private void Pin2Desktop_CheckedChanged(object sender, EventArgs e)
+        {
+            this.TopMost = !this.TopMost;
+            Pin2Desktop.Checked = this.TopMost;
+        }
+
         private void Start_Click(object sender, EventArgs e)
         {
             if (_antiSleepThread == null || !_antiSleepThread.IsAlive)
@@ -49,35 +84,6 @@ namespace AntiSleepApp
             statusLabel.Text = @"Stopped";
             stopButton.BackColor = Color.Red;
             startButton.BackColor = SystemColors.Control;
-        }
-
-        private void AntiSleepTask()
-        {
-            while (_keepRunning)
-            {
-                foreach (var c in Slogan)
-                {
-                    if (!_keepRunning) break;
-
-                    SendKeys.SendWait(c.ToString());
-                    Thread.Sleep(400);
-                }
-
-                for (var i = 0; i < Slogan.Length; i++)
-                {
-                    if (!_keepRunning) break;
-
-                    SendKeys.SendWait("{BACKSPACE}");
-                    Thread.Sleep(400);
-                }
-
-                var count = 0;
-                while (count < 50 && _keepRunning)
-                {
-                    Thread.Sleep(100);
-                    count++;
-                }
-            }
         }
     }
 }

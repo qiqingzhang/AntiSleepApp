@@ -10,3 +10,9 @@
 /obj/Debug
 *.user
 *.pfx
+/bin/Debug/AntiSleepApp.exe
+/bin/Debug/AntiSleepApp.pdb
+/obj/Debug/AntiSleepApp.csproj.AssemblyReference.cache
+/obj/Debug/AntiSleepApp.csproj.GenerateResource.cache
+/obj/Debug/AntiSleepApp.exe
+/obj/Debug/AntiSleepApp.pdb
