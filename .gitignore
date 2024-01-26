@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/AntiSleepApp/FileContentIndex
+/.vs/AntiSleepApp/v17
+/bin/Debug/app.publish/Application Files/AntiSleepApp_1_0_0_0
+*.json
+/bin/Debug
+/obj/Debug
+*.user
+*.pfx
