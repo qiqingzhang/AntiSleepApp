@@ -9,7 +9,7 @@ namespace AntiSleepApp
     {
         private Thread _antiSleepThread;
         private bool _keepRunning;
-        private const string Slogan = "forever!";
+        private const string Slogan = "Have It Your Way!";
 
         public AntiSleep()
         {
