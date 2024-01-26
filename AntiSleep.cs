@@ -13,7 +13,6 @@ namespace AntiSleepApp
 
         public AntiSleep()
         {
-            TopMost = true;
             InitializeComponent();
         }
 
@@ -43,64 +42,52 @@ namespace AntiSleepApp
                     Thread.Sleep(100);
                     count++;
                 }
+
+                Thread.Sleep(5000);
             }
         }
 
-        /// <summary>
-        ///     pin to desktop funtion.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void Pin2Desktop_CheckedChanged(object sender, EventArgs e)
         {
-            this.TopMost = !TopMost;
-            Pin2Desktop.Checked = TopMost;
+            TopMost = Pin2Desktop.Checked;
         }
 
-        /// <summary>
-        ///     start button click function
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void StartButton_Click(object sender, EventArgs e)
         {
+            _keepRunning = true;
             if (_antiSleepThread == null || !_antiSleepThread.IsAlive)
             {
-                _keepRunning = true;
-                _antiSleepThread = new Thread(AntiSleepTask)
-                {
-                    IsBackground = true
-                };
-                _antiSleepThread.Start();
-
-                statusLabel.Text = @"Running...";
-                startButton.BackColor = Color.Green;
-                stopButton.BackColor = SystemColors.Control;
+                InitializeAndStartAntiSleepThread();
             }
-            else
-            {
-                _keepRunning = true;
-            }
+            UpdateUIForState("Running...", Color.Green, SystemColors.Control);
         }
 
-        /// <summary>
-        ///     stop button click function
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void StopButton_Click(object sender, EventArgs e)
         {
             _keepRunning = false;
+            UpdateUIForState("Stopped", SystemColors.Control, Color.Red);
+        }
 
-            if (_antiSleepThread != null && _antiSleepThread.IsAlive)
+        private void InitializeAndStartAntiSleepThread()
+        {
+            _antiSleepThread = new Thread(AntiSleepTask)
             {
-                _antiSleepThread.Join();
+                IsBackground = true
+            };
+            _antiSleepThread.Start();
+        }
+
+        private void UpdateUIForState(string statusText, Color startButtonColor, Color stopButtonColor)
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => UpdateUIForState(statusText, startButtonColor, stopButtonColor)));
+                return;
             }
 
-            statusLabel.Text = @"Stopped";
-            stopButton.BackColor = Color.Red;
-            startButton.BackColor = SystemColors.Control;
+            statusLabel.Text = statusText;
+            startButton.BackColor = startButtonColor;
+            stopButton.BackColor = stopButtonColor;
         }
     }
 }
-    

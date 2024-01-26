@@ -33,6 +33,7 @@
             this.statusLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Pin2Desktop = new System.Windows.Forms.CheckBox();
+            this.TopMost = true;
             this.SuspendLayout();
             // 
             // startButton
